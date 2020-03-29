@@ -1,0 +1,237 @@
+* {
+  margin: 0;
+  font-family: "Nunito", sans-serif;
+}
+
+.container {
+  width: 100%;
+  text-align: center;
+  /* border: 1px solid red; */
+}
+
+/* >>>>>>>>>>>> HEADER <<<<<<<<<<<<<<< */
+header {
+  position: fixed;
+  z-index: 1;
+  right: 0;
+  left: 0;
+  top: 0;
+  background-color: black;
+}
+
+header div {
+  padding: 0;
+}
+.fig-header {
+  width: fit-content;
+  display: inline-block;
+}
+
+.flex-header {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 70px;
+  padding-right: 40px;
+}
+
+ul {
+  display: flex;
+  height: 90px;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+ul li {
+  width: fit-content;
+  list-style: none;
+  height: 90px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+ul li a {
+  text-decoration: none;
+  height: 90px;
+  display: inline-block;
+  line-height: 3.5;
+  font-size: 25px;
+  color: white;
+}
+
+li:hover {
+}
+
+.fa-paw {
+  font-size: 60px;
+  margin-top: 15px;
+  color: white;
+  cursor: pointer;
+}
+
+.fa-paw:hover {
+  text-shadow: 12px 2px 14px rgba(66, 28, 18, 0.86);
+}
+
+.replace {
+  height: 90px;
+  width: 100%;
+  background-color: black;
+}
+
+/* >>>>>>>>>>>HERO <<<<<<<<<<<<<<<<<< */
+
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 70px;
+  background: linear-gradient(
+      307deg,
+      rgba(22, 21, 27, 0.006039915966386533) 15%,
+      rgba(11, 10, 14, 0.44021358543417366) 54%
+    ),
+    url("images/friends.jpg") no-repeat;
+  background-position: center;
+
+  /* background-color: rgb(131, 20, 57); */
+}
+
+.place {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+
+p {
+  width: fit-content;
+  padding: 10px;
+  margin: 5px;
+}
+
+.title {
+  font-size: 8vh;
+  width: fit-content;
+  display: inline-block;
+  opacity: 0;
+  line-height: 2;
+  color: white;
+  text-shadow: -10px 0px 6px rgba(66, 28, 18, 0.86);
+  animation: titleAnimation 0.5s 1 0.35s linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes titleAnimation {
+  0% {
+    opacity: 0;
+    transform: translate(-300px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(xx);
+  }
+}
+
+/* >>>>>>>>>>>>>>>>> AREA DE FORM <<<<<<<<<<<<< */
+
+.alto {
+  height: 100vh;
+}
+
+.form-cont {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.formulario {
+  position: relative;
+  top: 300px;
+  height: 300px;
+}
+
+.form-cont p {
+  font-weight: 500;
+  font-size: 28px;
+  margin: 0;
+  margin-bottom: 35px;
+  padding: 0;
+  font-family: "Barlow", sans-serif;
+}
+
+.respuesta {
+  position: relative;
+  top: 35px;
+}
+
+.form-cont input {
+  width: 700px;
+  height: 30px;
+  border-radius: 5px;
+}
+
+.form-cont button {
+  width: 180px;
+  height: 35px;
+  margin-left: 10px;
+  font-style: oblique;
+  border-radius: 5px;
+  font-weight: 500;
+  background-color: #030202;
+  color: white;
+}
+
+.cat {
+  position: relative;
+  top: 20%;
+}
+/* >>>>>>>>>>>>>>>>>> FRIENDS <<<<<<<<<<<<<<<< */
+
+h3 {
+  text-align: center;
+  display: inline-block;
+  font-size: 2em;
+  margin-bottom: 15px;
+}
+
+.friends-cont {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 900px;
+}
+
+.friends-box {
+  border: 1px solid black;
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  width: 60%;
+  height: 252px;
+}
+.friends-box:hover {
+  -webkit-box-shadow: -12px -8px 9px -7px rgba(128, 124, 128, 1);
+  -moz-box-shadow: -12px -8px 9px -7px rgba(128, 124, 128, 1);
+  box-shadow: -12px -8px 9px -7px rgba(128, 124, 128, 1);
+}
+
+.friends-box p {
+  display: inline-block;
+  font-style: italic;
+}
+
+/* ------ENCONTRAR AMIGO-------- */
+
+.invitation {
+  background: linear-gradient(
+      307deg,
+      rgba(22, 21, 27, 0.006039915966386533) 15%,
+      rgba(11, 10, 14, 0.44021358543417366) 54%
+    ),
+    url("images/pets.jpg") no-repeat center;
+  background-size: cover;
+  height: 100vh;
+}
