@@ -5,7 +5,7 @@
 }
 
 .container {
-  width: 100vw;
+  width: 100%;
   text-align: center;
   /* border: 1px solid red; */
 }
@@ -72,10 +72,6 @@ ul li a:hover {
   cursor: pointer;
 }
 
-.fa-paw:hover {
-  text-shadow: 12px 2px 14px rgba(66, 28, 18, 0.86);
-}
-
 .replace {
   height: 90px;
   width: 100%;
@@ -86,7 +82,7 @@ ul li a:hover {
 
 .hero {
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   display: flex;
   align-items: center;
   padding-left: 70px;
@@ -161,7 +157,7 @@ p {
   font-weight: 500;
   font-size: 28px;
   margin: 0;
-  margin-bottom: 35px;
+  margin-bottom: 20px;
   padding: 0;
   font-family: "Barlow", sans-serif;
 }
@@ -175,6 +171,7 @@ p {
   width: 700px;
   height: 30px;
   border-radius: 5px;
+  border: 2px groove #030202;
 }
 
 .form-cont button {
@@ -212,11 +209,11 @@ h3 {
 
 .friends-box {
   border: 1px solid black;
-  display: inline-block;
   display: flex;
   align-items: center;
   width: 60%;
   height: 250px;
+  overflow: hidden;
 }
 .friends-box:hover {
   -webkit-box-shadow: -12px -8px 9px -7px rgba(128, 124, 128, 1);
@@ -227,6 +224,15 @@ h3 {
 .friends-box p {
   display: inline-block;
   font-style: italic;
+  padding: 0;
+  margin: 0;
+  width: fit-content;
+}
+
+.responsive-img {
+  height: auto;
+  max-width: 395px;
+  padding: 1px;
 }
 
 /* ------ REDIRECCIONAR ENCONTRAR AMIGO-------- */
@@ -240,7 +246,7 @@ h3 {
     url("images/pets.jpg") no-repeat center;
   background-size: cover;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -277,4 +283,107 @@ h3 {
 .footer-container p a {
   text-decoration: none;
   color: white;
+}
+
+@media screen and (max-width: 1300px) {
+  .title {
+    font-size: 6vh;
+  }
+  .form-cont input {
+    width: 500px;
+    margin-top: 10px;
+  }
+  .friends-box {
+    width: 80%;
+  }
+
+  .friends-box p {
+    padding: 1em;
+  }
+}
+
+.responsive-img {
+  padding: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .flex-header {
+    height: 30vh;
+    padding-left: 10px;
+  }
+  nav {
+    width: 100%;
+  }
+  ul {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0;
+  }
+  ul li {
+    height: 80px;
+  }
+  ul li a:hover {
+    background-color: black;
+    color: white;
+  }
+
+  .friends-box {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    max-width: 395px;
+  }
+  .friends-cont {
+    min-height: 1400px;
+  }
+
+  .form-wrapper {
+    height: 100vh;
+  }
+
+  .hero {
+    padding-left: 20px;
+    justify-content: center;
+  }
+  .title {
+    font-size: 5vh;
+  }
+
+  .cat {
+    top: 38%;
+    right: 10%;
+  }
+  .form-cont {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 10px;
+    max-height: 754px;
+  }
+
+  .form-cont input {
+    max-width: 400px;
+  }
+
+  .form-cont p {
+    font-weight: 500;
+    font-size: 1.6em;
+    margin: 0;
+    margin-bottom: 15px;
+    padding: 0;
+    font-family: "Barlow", sans-serif;
+  }
+
+  .form-cont button {
+    top: 20px;
+    position: relative;
+    width: 400px;
+    margin: 0;
+  }
+
+  .respuesta {
+    font-size: 10px;
+  }
 }

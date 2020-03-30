@@ -20,123 +20,139 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!---------------  HEADER -------------->
-    <header>
-      <div class="container">
-        <div class="flex-header">
-          <figure class="fig-header">
-            <i class="fas fa-paw"></i>
-          </figure>
-          <nav>
-            <ul>
-              <li><a href="#">Encontrar amigo</a></li>
-              <li><a href="#">About us</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
-          </nav>
+    <div class="wrapper">
+      <!---------------  HEADER -------------->
+      <header>
+        <div class="container">
+          <div class="flex-header">
+            <figure class="fig-header">
+              <i class="fas fa-paw"></i>
+            </figure>
+            <nav>
+              <ul>
+                <li><a href="#">Encontrar amigo</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
         </div>
+      </header>
+
+      <!------------- HERO  --------------->
+      <div class="container hero">
+        <h1 class="title">
+          Un nuevo compañero te espera, <br />
+          querés conocerlo?
+        </h1>
       </div>
-    </header>
 
-    <!------------- HERO  --------------->
-    <div class="container hero">
-      <h1 class="title">
-        Un nuevo compañero te espera, <br />
-        querés conocerlo?
-      </h1>
-    </div>
+      <!------------- FORM  --------------->
+      <div class="form-wrapper">
+        <div class="form-cont alto" data-aos="fade" data-aos-duration="2000">
+          <div class="formulario">
+            <p>
+              Para comenzar dinos tu nombre, por favor
+            </p>
 
-    <!------------- FORM  --------------->
-    <div class="form-cont alto" data-aos="fade" data-aos-duration="2000">
-      <div class="formulario">
-        <p>
-          Para comenzar dinos tu nombre, por favor
-        </p>
+            <input
+              type="text"
+              id="user-name"
+              placeholder="Introduce tu nombre..."
+              required
+            />
 
-        <input
-          type="text"
-          id="user-name"
-          placeholder="Introduce tu nombre..."
-          required
-        />
+            <button id="button">Enviar</button>
 
-        <button id="button">Enviar</button>
-
-        <p id="print-nombre" class="respuesta"></p>
-      </div>
-      <img
-        src="images/cat-ConvertImage.png"
-        width="150"
-        height="150"
-        class="cat"
-        alt=""
-      />
-    </div>
-
-    <!--WHY ADOPT A PET -->
-    <div class="container ">
-      <h3>¿Por qué adoptar una mascota?</h3>
-      <div class="friends-cont">
-        <div class="friends-box">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid ex
-            fuga neque! Modi, ut, neque voluptatum suscipit, nesciunt ea
-            voluptate laudantium tenetur ipsum sequi maxime et eum distinctio
-            placeat obcaecati!
-          </p>
+            <p id="print-nombre" class="respuesta"></p>
+          </div>
           <img
-            src="images/friend1.jpg"
-            alt="dog and woman"
-            width="400"
-            height="248"
+            src="images/cat-ConvertImage.png"
+            width="150"
+            height="150"
+            class="cat"
+            alt=""
           />
         </div>
-        <div class="friends-box">
-          <img src="images/friend2.jpg" alt="" width="400" height="248" />
+      </div>
 
+      <!--WHY ADOPT A PET -->
+      <div class="container ">
+        <h3>¿Por qué adoptar una mascota?</h3>
+        <div class="friends-cont">
+          <div class="friends-box">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
+              ex fuga neque! Modi, ut, neque voluptatum suscipit, nesciunt ea
+              voluptate laudantium tenetur ipsum sequi maxime et eum distinctio
+              placeat obcaecati!
+            </p>
+            <img
+              src="images/friend1.jpg"
+              alt="dog and woman"
+              width="395"
+              height="248"
+              class="responsive-img"
+            />
+          </div>
+          <div class="friends-box">
+            <img
+              src="images/friend2.jpg"
+              alt=""
+              width="395"
+              height="248"
+              class="responsive-img"
+            />
+
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
+              ex fuga neque! Modi, ut, neque voluptatum suscipit, nesciunt ea
+              voluptate laudantium tenetur ipsum sequi maxime et eum distinctio
+              placeat obcaecati!
+            </p>
+          </div>
+          <div class="friends-box">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
+              ex fuga neque! Modi, ut, neque voluptatum suscipit, nesciunt ea
+              voluptate laudantium tenetur ipsum sequi maxime et eum distinctio
+              placeat obcaecati!
+            </p>
+            <img
+              src="images/friend3.jpg"
+              alt=""
+              width="395"
+              height="248"
+              class="responsive-img"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!--REDIRECCIONAR A ENCONTRAR AMIGO -->
+
+      <div class="container invitation">
+        <div class="invitation-cont">
+          <h3>Ahora que conoces las bondades de tener una mascota</h3>
+          <h4>
+            Te invitamos a recorrer la sección
+            <a class="find-friend" href="#">encontrar amigo</a>
+          </h4>
+        </div>
+      </div>
+
+      <!------ FOOTER --------->
+
+      <div class="container footer-container">
+        <div>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid ex
-            fuga neque! Modi, ut, neque voluptatum suscipit, nesciunt ea
-            voluptate laudantium tenetur ipsum sequi maxime et eum distinctio
-            placeat obcaecati!
+            This is not a real website. It's a
+            <a href="https://github.com/belueg" target="_blank">belueg's</a>
+            practice ♥
           </p>
         </div>
-        <div class="friends-box">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid ex
-            fuga neque! Modi, ut, neque voluptatum suscipit, nesciunt ea
-            voluptate laudantium tenetur ipsum sequi maxime et eum distinctio
-            placeat obcaecati!
-          </p>
-          <img src="images/friend3.jpg" alt="" width="400" height="248" />
-        </div>
       </div>
     </div>
-
-    <!--REDIRECCIONAR A ENCONTRAR AMIGO -->
-
-    <div class="container invitation">
-      <div class="invitation-cont">
-        <h3>Ahora que conoces las bondades de tener una mascota</h3>
-        <h4>
-          Te invitamos a recorrer la sección
-          <a class="find-friend" href="#">encontrar amigo</a>
-        </h4>
-      </div>
-    </div>
-
-    <!------ FOOTER --------->
-
-    <div class="container footer-container">
-      <div>
-        <p>
-          This is not a real website. It's a
-          <a href="https://github.com/belueg" target="_blank">belueg's</a>
-          practice ♥
-        </p>
-      </div>
-    </div>
-
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();
