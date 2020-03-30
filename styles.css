@@ -286,9 +286,7 @@ h3 {
 }
 
 @media screen and (max-width: 1300px) {
-  .title {
-    font-size: 6vh;
-  }
+  
   .form-cont input {
     width: 500px;
     margin-top: 10px;
@@ -305,6 +303,14 @@ h3 {
 .responsive-img {
   padding: 0;
 }
+@media screen and (max-width: 1200px) {
+
+  .title{
+font-size: 6vh;
+
+
+  }
+}
 
 @media screen and (max-width: 768px) {
   .flex-header {
@@ -317,18 +323,30 @@ h3 {
   ul {
     height: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-direction: column;
     padding: 0;
   }
-  ul li {
-    height: 80px;
-  }
+ ul li  {
+height: 50px; 
+} 
+
+ul li a {
+  line-height: initial;
+  font-size: 3vh;
+  
+}
+  
   ul li a:hover {
-    background-color: black;
+    background-color: initial;
     color: white;
   }
 
+  .title{
+    position: relative;
+    top:50px;
+
+  }
   .friends-box {
     flex-direction: column;
     align-items: center;
@@ -347,13 +365,10 @@ h3 {
     padding-left: 20px;
     justify-content: center;
   }
-  .title {
-    font-size: 5vh;
-  }
-
+  
   .cat {
-    top: 38%;
-    right: 10%;
+    top: 40%;
+    right: 5%;
   }
   .form-cont {
     display: flex;
