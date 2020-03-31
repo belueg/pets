@@ -23,10 +23,10 @@
     <div class="wrapper">
       <!---------------  HEADER -------------->
       <header>
-        <div class="container">
+        <div class="container header-div visibility" id="menu-header">
           <div class="flex-header">
             <figure class="fig-header">
-              <i class="fas fa-paw"></i>
+              <i onclick="burger()" id="paw" class="fas fa-paw"></i>
             </figure>
             <nav>
               <ul>
@@ -49,7 +49,7 @@
 
       <!------------- FORM  --------------->
       <div class="form-wrapper">
-        <div class="form-cont alto" data-aos="fade" data-aos-duration="2000">
+        <div class="form-cont" data-aos="fade" data-aos-duration="2000">
           <div class="formulario">
             <p>
               Para comenzar dinos tu nombre, por favor
@@ -64,7 +64,7 @@
 
             <button id="button">Enviar</button>
 
-            <p id="print-nombre" class="respuesta"></p>
+            <p id="print-nombre" class="answer"></p>
           </div>
           <img
             src="images/cat-ConvertImage.png"
@@ -144,13 +144,11 @@
       <!------ FOOTER --------->
 
       <div class="container footer-container">
-        <div>
-          <p>
-            This is not a real website. It's a
-            <a href="https://github.com/belueg" target="_blank">belueg's</a>
-            practice ♥
-          </p>
-        </div>
+        <p>
+          This is not a real website. It's a
+          <a href="https://github.com/belueg" target="_blank">belueg's</a>
+          practice ♥
+        </p>
       </div>
     </div>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>

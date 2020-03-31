@@ -4,23 +4,23 @@
   box-sizing: border-box;
 }
 
+html {
+  position: relative;
+}
 .container {
   width: 100%;
   text-align: center;
-  /* border: 1px solid red; */
 }
 
 /* >>>>>>>>>>>> HEADER <<<<<<<<<<<<<<< */
-header {
+
+.header-div {
   position: fixed;
   z-index: 1;
   right: 0;
   left: 0;
   top: 0;
   background-color: black;
-}
-
-header div {
   padding: 0;
 }
 .fig-header {
@@ -65,11 +65,16 @@ ul li a:hover {
   color: black;
 }
 
-.fa-paw {
+.fa-paw,
+.fa-paw2 {
   font-size: 60px;
   margin-top: 15px;
   color: white;
   cursor: pointer;
+}
+
+.fa-paw {
+  visibility: hidden;
 }
 
 .replace {
@@ -135,10 +140,6 @@ p {
 
 /* >>>>>>>>>>>>>>>>> AREA DE FORM <<<<<<<<<<<<< */
 
-.alto {
-  height: 100vh;
-}
-
 .form-cont {
   display: flex;
   justify-content: center;
@@ -162,7 +163,7 @@ p {
   font-family: "Barlow", sans-serif;
 }
 
-.respuesta {
+.answer {
   position: relative;
   top: 35px;
 }
@@ -209,6 +210,7 @@ h3 {
 
 .friends-box {
   border: 1px solid black;
+  padding: 1px;
   display: flex;
   align-items: center;
   width: 60%;
@@ -285,14 +287,16 @@ h3 {
   color: white;
 }
 
+/* <<<<<<< MEDIA QUERIES <<<<<<<<<< */
+
 @media screen and (max-width: 1300px) {
-  
   .form-cont input {
     width: 500px;
     margin-top: 10px;
   }
   .friends-box {
     width: 80%;
+    padding: 0;
   }
 
   .friends-box p {
@@ -304,11 +308,8 @@ h3 {
   padding: 0;
 }
 @media screen and (max-width: 1200px) {
-
-  .title{
-font-size: 6vh;
-
-
+  .title {
+    font-size: 6vh;
   }
 }
 
@@ -327,25 +328,23 @@ font-size: 6vh;
     flex-direction: column;
     padding: 0;
   }
- ul li  {
-height: 50px; 
-} 
+  ul li {
+    height: 50px;
+  }
 
-ul li a {
-  line-height: initial;
-  font-size: 3vh;
-  
-}
-  
+  ul li a {
+    line-height: initial;
+    font-size: 3vh;
+  }
+
   ul li a:hover {
     background-color: initial;
     color: white;
   }
 
-  .title{
+  .title {
     position: relative;
-    top:50px;
-
+    top: 50px;
   }
   .friends-box {
     flex-direction: column;
@@ -365,7 +364,7 @@ ul li a {
     padding-left: 20px;
     justify-content: center;
   }
-  
+
   .cat {
     top: 40%;
     right: 5%;
@@ -400,5 +399,76 @@ ul li a {
 
   .respuesta {
     font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .form-wrapper {
+    height: 120vh;
+  }
+  .formulario {
+    position: initial;
+    text-align: center;
+  }
+
+  .formulario p {
+    display: inline-block;
+    margin: 5px 0;
+  }
+  .cat {
+    position: initial;
+  }
+
+  .form-cont {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .visibility {
+    visibility: hidden;
+  }
+
+  .flex-header {
+    padding: 0;
+  }
+  .fa-paw {
+    visibility: visible;
+    background-color: black;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    margin: 0;
+    padding: 5px;
+    border-radius: 30%;
+    font-size: 3em;
+  }
+
+  .formulario p {
+    font-size: 3vh;
+  }
+
+  .formulario input,
+  button {
+    max-width: 300px;
+  }
+
+  .answer {
+    font-size: 3vh;
+  }
+  .footer-container {
+    justify-content: center;
+  }
+
+  .footer-container p {
+    color: white;
+    position: static;
+    display: inline-block;
+    font-style: italic;
+    padding: 0;
+    margin: 0;
   }
 }
