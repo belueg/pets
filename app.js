@@ -2,6 +2,9 @@ var n = document.getElementById("user-name");
 var menu = document.getElementById("menu-header");
 var b = document.getElementById("button");
 var print = document.getElementById("print-nombre");
+
+
+
 var name;
 var notVisible = true;
 
@@ -30,3 +33,6 @@ function burger() {
     notVisible = true;
   }
 }
+
+
+

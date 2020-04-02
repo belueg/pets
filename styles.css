@@ -74,6 +74,12 @@ ul li a:hover {
   font-size: 60px;
   margin-top: 15px;
   cursor: pointer;
+
+}
+
+.home-icon-link{
+  text-decoration: none;
+  color: black;
 }
 
 .fa-paw,
@@ -301,6 +307,103 @@ h3 {
   color: white;
 }
 
+/* <<<<<<<<<PETS /  MASCOTAS <<<<<<<<<<< */
+.adopt-section{
+display: flex;
+height: auto;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+margin-top:10px;
+padding: 2%;
+
+}
+.pets-grid-container-dog{
+  display: grid;
+  grid-template: repeat(3, 180px) /repeat(3,minmax(210px, 1fr));
+  grid-gap: 1em;
+  height: auto;
+  width: 70%;
+}
+
+.pets-grid-container-cat{
+  display: grid;
+  grid-template: repeat(3, 180px) /repeat(3,minmax(210px, 1fr));
+  grid-gap: 1em;
+  height: auto;
+  width: 70%;
+}
+.item{
+  overflow: hidden;
+  border-radius: 5%;
+  position: relative;
+  cursor: pointer;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #2b2a28;
+}
+
+.item:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
+.animal-list li {
+  font-size: 1.5em;
+  font-weight: bolder ;
+  display: inline-block;
+  height: fit-content;
+  cursor: pointer;
+}
+
+.animal-list button {
+
+  background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+.selected{
+  text-decoration: underline;
+  text-shadow: 0px 0px 9px rgba(255, 236, 94, 1);
+}
+
+.invisible{
+  display: none;
+}
+
+.item img {
+
+  width: 100%;
+  
+}
+
 /* <<<<<<< MEDIA QUERIES <<<<<<<<<< */
 
 @media screen and (max-width: 1300px) {
@@ -327,6 +430,11 @@ h3 {
   }
 }
 
+@media screen and (max-width: 980px) {
+
+
+
+}
 @media screen and (max-width: 768px) {
   .flex-header {
     padding-left: 10px;
@@ -334,6 +442,7 @@ h3 {
   nav {
     width: 100%;
   }
+
   ul {
     /* height: 100%;
     display: flex;

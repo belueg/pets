@@ -1,0 +1,46 @@
+<link
+      href="https://fonts.googleapis.com/css?family=Barlow:300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <!---------------  HEADER -------------->
+      <header>
+        <figure class="fig-header">
+          <i onclick="burger()" id="paw" class="fas fa-paw"></i>
+        </figure>
+        <div class="container header-div visibility" id="menu-header">
+          <div class="flex-header">
+            <a class="home-icon-link" href="index.html"><i class="fas fa-home"></i></a>
+            <nav>
+              <ul>
+                <li class="home-li"><a href="index.html">Home</a></li>
+                <li><a href="findFriend.html">Encontrar amigo</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+     
+      <!------ FOOTER --------->
+
+      <div class="container footer-container">
+        <p>
+          This is not a real website. It's a
+          <a href="https://github.com/belueg" target="_blank">belueg's</a>
+          practice ♥
+        </p>
+      </div>
+    </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="app.js"></script>
+  </body>
+</html>
