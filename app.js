@@ -10,6 +10,7 @@ var notVisible = true;
 
 b.addEventListener("click", saludar);
 
+
 // Form gretting
 
 function saludar() {

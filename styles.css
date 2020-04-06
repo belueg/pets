@@ -310,32 +310,36 @@ h3 {
 /* <<<<<<<<<PETS /  MASCOTAS <<<<<<<<<<< */
 .adopt-section{
 display: flex;
-height: auto;
-justify-content: center;
+min-height: 90vh;
+padding-bottom:2% ;
 align-items: center;
+justify-content: center;
 flex-direction: column;
 margin-top:10px;
-padding: 2%;
 
 }
-.pets-grid-container-dog{
+
+
+
+.pets-grid-container-dog, .pets-grid-container-cat{
   display: grid;
-  grid-template: repeat(3, 180px) /repeat(3,minmax(210px, 1fr));
+  justify-content: center;
+  grid-template: repeat(3, 180px) /repeat(auto-fill,minmax(210px, 270px));
+  grid-gap: 1em;
+  height: auto;
+  max-width:845px;
+}
+
+/* .pets-grid-container-cat{
+  display: grid;
+  grid-template: repeat(3, 180px) /repeat(3,minmax(210px, 270px));
   grid-gap: 1em;
   height: auto;
   width: 70%;
-}
-
-.pets-grid-container-cat{
-  display: grid;
-  grid-template: repeat(3, 180px) /repeat(3,minmax(210px, 1fr));
-  grid-gap: 1em;
-  height: auto;
-  width: 70%;
-}
+} */
 .item{
   overflow: hidden;
-  border-radius: 5%;
+  border-radius: 2%;
   position: relative;
   cursor: pointer;
 }
@@ -391,7 +395,6 @@ padding: 2%;
 
 .selected{
   text-decoration: underline;
-  text-shadow: 0px 0px 9px rgba(255, 236, 94, 1);
 }
 
 .invisible{
@@ -605,6 +608,10 @@ padding: 2%;
 }
 
 @media screen and (max-width: 425px) {
+
+  header{
+    height: 0px;
+  }
   .form-wrapper {
     justify-content: center;
     height: 100vh;
@@ -634,6 +641,11 @@ padding: 2%;
     font-size: 4;
   }
 
+.pets-grid-container-dog, .pets-grid-container-cat{
+  max-width:270px;
+
+}
+
   .footer-container {
     justify-content: center;
   }
@@ -651,5 +663,11 @@ padding: 2%;
 @media screen and (max-width: 425px) {
   .friends-box {
     max-height: 400px;
+  }
+
+  .animal-list{
+    flex-direction: row;
+    padding: 0;
+    margin-bottom: 2%;
   }
 }
