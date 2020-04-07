@@ -22,6 +22,7 @@ html {
   top: 0;
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.25) 0 2px 4px 0;
+  transition: 0.3s;
 
   padding: 0;
 }
@@ -66,7 +67,7 @@ ul li a {
 }
 
 ul li a:hover {
-  background-color: cornsilk;
+  background-color: gainsboro;
   color: black;
 }
 
@@ -74,10 +75,9 @@ ul li a:hover {
   font-size: 60px;
   margin-top: 15px;
   cursor: pointer;
-
 }
 
-.home-icon-link{
+.home-icon-link {
   text-decoration: none;
   color: black;
 }
@@ -151,7 +151,6 @@ p {
   }
   100% {
     opacity: 1;
-    transform: translate(xx);
   }
 }
 
@@ -308,26 +307,34 @@ h3 {
 }
 
 /* <<<<<<<<<PETS /  MASCOTAS <<<<<<<<<<< */
-.adopt-section{
-display: flex;
-min-height: 90vh;
-padding-bottom:2% ;
-align-items: center;
-justify-content: center;
-flex-direction: column;
-margin-top:10px;
-
+.adopt-section-title {
+  font-size: 3vh;
 }
 
+.adopt-little-description {
+  display: inline-block;
+  font-size: 2vh;
+}
 
+.adopt-section {
+  display: flex;
+  min-height: 84vh;
+  padding-bottom: 2%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 10px;
+}
 
-.pets-grid-container-dog, .pets-grid-container-cat{
+.pets-grid-container-dog,
+.pets-grid-container-cat {
   display: grid;
   justify-content: center;
-  grid-template: repeat(3, 180px) /repeat(auto-fill,minmax(210px, 270px));
-  grid-gap: 1em;
+  grid-template: repeat(3, 180px) / repeat(auto-fill, minmax(210px, 270px));
+  grid-gap: 1.5em;
   height: auto;
-  max-width:845px;
+  /* max-width: 845px; */
+  max-width: 1040px;
 }
 
 /* .pets-grid-container-cat{
@@ -337,7 +344,7 @@ margin-top:10px;
   height: auto;
   width: 70%;
 } */
-.item{
+.item {
   overflow: hidden;
   border-radius: 2%;
   position: relative;
@@ -346,68 +353,181 @@ margin-top:10px;
 
 .overlay {
   position: absolute;
+  overflow: hidden;
+  padding-left: 15px;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  height: 100%;
+  height: 0;
   width: 100%;
-  opacity: 0;
-  transition: .5s ease;
+  transition: height 0.5s ease;
   background-color: #2b2a28;
 }
 
 .item:hover .overlay {
-  opacity: 1;
+  height: 100%;
 }
 
-.text {
+.animal-description {
+  display: flex;
+  padding-left: 10%;
+  flex-direction: column;
+  align-items: flex-start;
   color: white;
-  font-size: 20px;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
+  text-align: left;
+  top: 25%;
+  height: 90px;
 }
 
+.animal-description li {
+  display: list-item;
+  padding-left: 0px;
+  list-style-type: circle;
+}
 
 .animal-list li {
   font-size: 1.5em;
-  font-weight: bolder ;
+  font-weight: bolder;
   display: inline-block;
   height: fit-content;
   cursor: pointer;
 }
 
 .animal-list button {
-
   background: none;
-	color: inherit;
-	border: none;
-	padding: 0;
-	font: inherit;
-	cursor: pointer;
-	outline: inherit;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
 }
 
-.selected{
+.selected {
   text-decoration: underline;
 }
 
-.invisible{
+.invisible {
   display: none;
 }
 
 .item img {
-
   width: 100%;
-  
 }
 
+/* <<<<<<<<<<< ABOUT US <<<<<<<<<<<< */
+
+.aboutContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgAbout {
+  height: 30vh;
+  width: 100%;
+  margin: auto;
+  background-image: url("images/dog-about-us.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.aboutDescription {
+  width: 80%;
+  height: 59vh;
+  margin-bottom: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutTitle {
+  font-size: 2.8em;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.aboutTextContainer {
+  padding: 0% 2% 2% 1%;
+  line-height: 35px;
+  width: 80%;
+}
+
+.aboutTextContainer p {
+  font-size: 1.4em;
+  font-weight: 100;
+  text-align: justify;
+}
+
+/* <<<<<<<<<<< CONTACT SECTION <<<<<<<<<< */
+
+.contact-section {
+  height: 83vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.formulario-contacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40vw;
+  height: 60vh;
+  background-color: black;
+  color: white;
+}
+
+.formulario-contacto p {
+  display: inline-block;
+}
+.contact-inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 60%;
+}
+.contact-inputs input,
+.contact-inputs button {
+  display: inline-block;
+}
+
+.contact-inputs input {
+  background-color: black;
+  border: none;
+  border-bottom: 1px solid gray;
+  width: 80%;
+}
+
+.contact-inputs input:focus {
+  outline: none;
+}
+
+.contact-inputs button {
+  background-color: black;
+  color: white;
+  width: 20%;
+  height: 15%;
+  cursor: pointer;
+}
 /* <<<<<<< MEDIA QUERIES <<<<<<<<<< */
+
+@media screen and (max-width: 1440px) {
+  .adopt-section {
+    margin-top: 5%;
+  }
+
+  .aboutDescription {
+    height: initial;
+  }
+}
 
 @media screen and (max-width: 1300px) {
   .form-cont input {
@@ -427,17 +547,27 @@ margin-top:10px;
 .responsive-img {
   padding: 0;
 }
+
+@media screen and (max-width: 1024px) {
+  .aboutTitle {
+    font-size: 1.5em;
+  }
+  .aboutDescription {
+    width: 100%;
+  }
+  .aboutTextContainer p {
+    font-size: 1.1em;
+    line-height: initial;
+    width: initial;
+  }
+}
+
 @media screen and (max-width: 1200px) {
   .title {
     font-size: 6vh;
   }
 }
 
-@media screen and (max-width: 980px) {
-
-
-
-}
 @media screen and (max-width: 768px) {
   .flex-header {
     padding-left: 10px;
@@ -446,13 +576,6 @@ margin-top:10px;
     width: 100%;
   }
 
-  ul {
-    /* height: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: column; */
-    /* padding: 0; */
-  }
   ul li {
     height: fit-content;
   }
@@ -521,6 +644,14 @@ margin-top:10px;
   .respuesta {
     font-size: 10px;
   }
+
+  .aboutDescription {
+    width: 100%;
+    margin-bottom: 0;
+  }
+  .aboutTextContainer {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 680px) {
@@ -582,7 +713,8 @@ margin-top:10px;
   }
 
   .visibility {
-    visibility: hidden;
+    /* visibility: hidden; */
+    transform: translate(-100%);
   }
 
   .fa-paw {
@@ -605,11 +737,16 @@ margin-top:10px;
   .title {
     font-size: 5vh;
   }
+
+  .animal-list {
+    flex-direction: row;
+    padding: 0;
+    margin-bottom: 2%;
+  }
 }
 
 @media screen and (max-width: 425px) {
-
-  header{
+  header {
     height: 0px;
   }
   .form-wrapper {
@@ -641,10 +778,14 @@ margin-top:10px;
     font-size: 4;
   }
 
-.pets-grid-container-dog, .pets-grid-container-cat{
-  max-width:270px;
+  h3 {
+    margin-top: 25%;
+  }
 
-}
+  .pets-grid-container-dog,
+  .pets-grid-container-cat {
+    max-width: 270px;
+  }
 
   .footer-container {
     justify-content: center;
@@ -658,16 +799,36 @@ margin-top:10px;
     padding: 0;
     margin: 0;
   }
-}
-
-@media screen and (max-width: 425px) {
   .friends-box {
     max-height: 400px;
   }
 
-  .animal-list{
-    flex-direction: row;
-    padding: 0;
-    margin-bottom: 2%;
+  nav ul {
+    padding: 0px;
+  }
+
+  .imgAbout {
+    background-position: center;
+
+    height: 30vh;
+  }
+
+  .adopt-section {
+    margin-top: 15%;
+  }
+
+  .aboutTitle {
+    display: flex;
+    align-items: center;
+    height: 20vh;
+    margin: 0px;
+  }
+  .aboutTextContainer {
+    background-color: white;
+  }
+}
+@media screen and (max-width: 375px) {
+  .friends-box:nth-child(2) p {
+    padding: 8px;
   }
 }
