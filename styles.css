@@ -107,7 +107,7 @@ ul li a:hover {
   width: 100%;
   display: flex;
   align-items: center;
-  padding-left: 70px;
+  padding-left: 2%;
   background: linear-gradient(
       307deg,
       rgba(22, 21, 27, 0.006039915966386533) 15%,
@@ -229,17 +229,12 @@ h3 {
 
 .friends-box {
   border: 1px solid black;
-  padding: 1px;
+  /* padding: 1px; */
   display: flex;
   align-items: center;
   width: 60%;
   height: 250px;
   overflow: hidden;
-}
-.friends-box:hover {
-  -webkit-box-shadow: -12px -8px 9px -7px rgba(128, 124, 128, 1);
-  -moz-box-shadow: -12px -8px 9px -7px rgba(128, 124, 128, 1);
-  box-shadow: -12px -8px 9px -7px rgba(128, 124, 128, 1);
 }
 
 .friends-box p {
@@ -441,24 +436,24 @@ h3 {
   margin-bottom: 2%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
 }
 
 .aboutTitle {
-  font-size: 2.8em;
+  font-size: 2.2em;
   text-align: center;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .aboutTextContainer {
-  padding: 0% 2% 2% 1%;
-  line-height: 35px;
+  padding: 0% 2% 0% 1%;
+  line-height: 30px;
   width: 80%;
 }
 
 .aboutTextContainer p {
-  font-size: 1.4em;
+  font-size: 1.1em;
   font-weight: 100;
   text-align: justify;
 }
@@ -477,7 +472,7 @@ h3 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 40vw;
+  width: 40%;
   height: 60vh;
   background-color: black;
   color: white;
@@ -527,308 +522,361 @@ h3 {
   .aboutDescription {
     height: initial;
   }
-}
-
-@media screen and (max-width: 1300px) {
-  .form-cont input {
-    width: 500px;
-    margin-top: 10px;
+  .contact-section {
+    height: 78vh;
   }
-  .friends-box {
-    width: 80%;
+
+  @media screen and (max-width: 1300px) {
+    .form-cont input {
+      width: 500px;
+      margin-top: 10px;
+    }
+    .friends-box {
+      width: 80%;
+      padding: 0;
+    }
+
+    .friends-box p {
+      padding: 1em;
+    }
+  }
+
+  .responsive-img {
     padding: 0;
   }
 
-  .friends-box p {
-    padding: 1em;
-  }
-}
+  @media screen and (max-width: 1024px) {
+    .aboutTitle {
+      font-size: 1.5em;
+    }
+    .aboutDescription {
+      width: 100%;
+    }
+    .aboutTextContainer p {
+      font-size: 1.1em;
+      line-height: initial;
+      width: initial;
+    }
 
-.responsive-img {
-  padding: 0;
-}
-
-@media screen and (max-width: 1024px) {
-  .aboutTitle {
-    font-size: 1.5em;
-  }
-  .aboutDescription {
-    width: 100%;
-  }
-  .aboutTextContainer p {
-    font-size: 1.1em;
-    line-height: initial;
-    width: initial;
-  }
-}
-
-@media screen and (max-width: 1200px) {
-  .title {
-    font-size: 6vh;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .flex-header {
-    padding-left: 10px;
-  }
-  nav {
-    width: 100%;
+    .formulario-contacto {
+      width: 60%;
+    }
   }
 
-  ul li {
-    height: fit-content;
+  @media screen and (max-width: 1200px) {
+    .title {
+      font-size: 6vh;
+    }
   }
 
-  ul li a {
-    line-height: initial;
-    height: fit-content;
+  @media screen and (max-width: 768px) {
+    .flex-header {
+      padding-left: 10px;
+    }
+    nav {
+      width: 100%;
+    }
+
+    ul li {
+      height: fit-content;
+    }
+
+    ul li a {
+      line-height: initial;
+      height: fit-content;
+    }
+
+    ul li a:hover {
+      background-color: initial;
+    }
+
+    .title {
+      position: relative;
+      top: 50px;
+    }
+    .friends-box {
+      flex-direction: column;
+      align-items: center;
+      height: auto;
+      max-width: 395px;
+    }
+    .friends-cont {
+      min-height: 1400px;
+    }
+
+    .form-wrapper {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero {
+      padding-left: 20px;
+      justify-content: center;
+    }
+
+    .form-cont {
+      display: flex;
+      justify-content: center;
+      position: relative;
+      margin-bottom: 10px;
+      max-height: 754px;
+    }
+
+    .form-cont input {
+      max-width: 400px;
+    }
+
+    .form-cont p {
+      font-weight: 500;
+      font-size: 1.6em;
+      margin: 0;
+      margin-bottom: 15px;
+      padding: 0;
+      font-family: "Barlow", sans-serif;
+    }
+
+    .form-cont button {
+      top: 20px;
+      position: relative;
+      width: 400px;
+      margin: 0;
+    }
+
+    .respuesta {
+      font-size: 10px;
+    }
+
+    .aboutDescription {
+      width: 100%;
+      height: 60vh;
+      margin-bottom: 0;
+    }
+    .aboutTextContainer {
+      width: 100%;
+    }
+
+    .contact-section {
+      height: 85vh;
+    }
+
+    .contact-inputs button {
+      width: 40%;
+    }
+
+    .formulario-contacto {
+      width: 80%;
+    }
+
+    .form-wrapper {
+      height: 100vh;
+      align-items: flex-end;
+    }
+    .formulario {
+      position: initial;
+      text-align: center;
+    }
+
+    .formulario p {
+      display: inline-block;
+      margin: 5px 0;
+    }
+
+    .cat {
+      position: relative;
+      top: 25px;
+    }
+
+    .form-cont {
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+    }
   }
 
-  ul li a:hover {
-    background-color: initial;
+  @media screen and (max-width: 680px) {
+    .aboutContainer {
+      height: 75vh;
+    }
+  }
+  @media screen and (max-width: 680px) {
+    ul li a {
+      font-size: 20px;
+    }
   }
 
-  .title {
-    position: relative;
-    top: 50px;
-  }
-  .friends-box {
-    flex-direction: column;
-    align-items: center;
-    height: auto;
-    max-width: 395px;
-  }
-  .friends-cont {
-    min-height: 1400px;
+  @media screen and (max-width: 620px) {
+    .flex-header {
+      height: 50vh;
+    }
+
+    ul {
+      height: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      flex-direction: column;
+    }
+
+    ul li a {
+      font-size: 1.8em;
+    }
+
+    ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .home-li {
+      display: inline-block;
+    }
+
+    .fa-home {
+      display: none;
+    }
+
+    .visibility {
+      /* visibility: hidden; */
+      transform: translate(-100%);
+    }
+
+    .fa-paw {
+      visibility: visible;
+      background-color: black;
+      position: fixed;
+      z-index: 2;
+      left: 0;
+      top: 0;
+      margin: 0;
+      padding: 5px;
+      border-radius: 30%;
+      font-size: 3em;
+    }
+
+    .hero {
+      padding: 0;
+    }
+
+    .title {
+      font-size: 5vh;
+    }
+
+    .animal-list {
+      flex-direction: row;
+      padding: 0;
+      margin-bottom: 2%;
+    }
   }
 
-  .form-wrapper {
-    height: 100vh;
-    display: flex;
-  }
+  @media screen and (max-width: 425px) {
+    header {
+      height: 0px;
+    }
+    .form-wrapper {
+      justify-content: center;
+      height: 110vh;
+    }
 
-  .hero {
-    padding-left: 20px;
-    justify-content: center;
-  }
+    .flex-header {
+      padding: 0;
+    }
 
-  .form-cont {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    margin-bottom: 10px;
-    max-height: 754px;
-  }
+    .formulario p {
+      font-size: 3vh;
+    }
 
-  .form-cont input {
-    max-width: 400px;
-  }
+    .formulario input,
+    button {
+      max-width: 300px;
+    }
 
-  .form-cont p {
-    font-weight: 500;
-    font-size: 1.6em;
-    margin: 0;
-    margin-bottom: 15px;
-    padding: 0;
-    font-family: "Barlow", sans-serif;
-  }
+    .answer {
+      font-size: 3vh;
+    }
 
-  .form-cont button {
-    top: 20px;
-    position: relative;
-    width: 400px;
-    margin: 0;
-  }
+    .hero {
+      height: 100vh;
+    }
+    .title {
+      font-size: 4;
+    }
 
-  .respuesta {
-    font-size: 10px;
-  }
+    h3 {
+      margin-top: 25%;
+    }
 
-  .aboutDescription {
-    width: 100%;
-    margin-bottom: 0;
-  }
-  .aboutTextContainer {
-    width: 100%;
-  }
-}
+    .pets-grid-container-dog,
+    .pets-grid-container-cat {
+      max-width: 270px;
+    }
 
-@media screen and (max-width: 680px) {
-  ul li a {
-    font-size: 20px;
-  }
-}
+    .footer-container {
+      justify-content: center;
+    }
 
-@media screen and (max-width: 620px) {
-  .form-wrapper {
-    height: 100vh;
-    align-items: flex-end;
-  }
-  .formulario {
-    position: initial;
-    text-align: center;
-  }
+    .footer-container p {
+      color: white;
+      position: static;
+      display: inline-block;
+      font-style: italic;
+      padding: 0;
+      margin: 0;
+    }
+    .friends-box {
+      max-height: 400px;
+    }
 
-  .formulario p {
-    display: inline-block;
-    margin: 5px 0;
-  }
+    nav ul {
+      padding: 0px;
+    }
 
-  .cat {
-    position: relative;
-    top: 25px;
-  }
+    .imgAbout {
+      background-position: center;
 
-  .form-cont {
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-  }
-  .flex-header {
-    height: 50vh;
-  }
+      height: 30vh;
+    }
 
-  ul {
-    height: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
-  }
+    .adopt-section {
+      margin-top: 15%;
+    }
 
-  ul li a {
-    font-size: 1.8em;
-  }
+    .aboutTitle {
+      display: flex;
+      align-items: center;
+      height: 15vh;
+      margin: 0px;
+    }
 
-  ul li a:hover {
-    text-decoration: underline;
-  }
+    .aboutContainer {
+      height: 80%;
+    }
 
-  .home-li {
-    display: inline-block;
-  }
+    .aboutDescription {
+      height: 70%;
+    }
 
-  .fa-home {
-    display: none;
-  }
+    .aboutTextContainer {
+      background-color: white;
+      /* height: 50vh; */
+    }
 
-  .visibility {
-    /* visibility: hidden; */
-    transform: translate(-100%);
-  }
-
-  .fa-paw {
-    visibility: visible;
-    background-color: black;
-    position: fixed;
-    z-index: 2;
-    left: 0;
-    top: 0;
-    margin: 0;
-    padding: 5px;
-    border-radius: 30%;
-    font-size: 3em;
-  }
-
-  .hero {
-    padding: 0;
-  }
-
-  .title {
-    font-size: 5vh;
-  }
-
-  .animal-list {
-    flex-direction: row;
-    padding: 0;
-    margin-bottom: 2%;
-  }
-}
-
-@media screen and (max-width: 425px) {
-  header {
-    height: 0px;
-  }
-  .form-wrapper {
-    justify-content: center;
-    height: 100vh;
-  }
-
-  .flex-header {
-    padding: 0;
-  }
-
-  .formulario p {
-    font-size: 3vh;
-  }
-
-  .formulario input,
-  button {
-    max-width: 300px;
-  }
-
-  .answer {
-    font-size: 3vh;
-  }
-
-  .hero {
-    height: 120vh;
-  }
-  .title {
-    font-size: 4;
-  }
-
-  h3 {
-    margin-top: 25%;
-  }
-
-  .pets-grid-container-dog,
-  .pets-grid-container-cat {
-    max-width: 270px;
-  }
-
-  .footer-container {
-    justify-content: center;
-  }
-
-  .footer-container p {
-    color: white;
-    position: static;
-    display: inline-block;
-    font-style: italic;
-    padding: 0;
-    margin: 0;
-  }
-  .friends-box {
-    max-height: 400px;
-  }
-
-  nav ul {
-    padding: 0px;
-  }
-
-  .imgAbout {
-    background-position: center;
-
-    height: 30vh;
-  }
-
-  .adopt-section {
-    margin-top: 15%;
-  }
-
-  .aboutTitle {
-    display: flex;
-    align-items: center;
-    height: 20vh;
-    margin: 0px;
-  }
-  .aboutTextContainer {
-    background-color: white;
+    .contact-section {
+      height: 88vh;
+    }
   }
 }
 @media screen and (max-width: 375px) {
   .friends-box:nth-child(2) p {
     padding: 8px;
+  }
+
+  .formulario-contacto {
+    width: 100%;
+  }
+
+  .formulario-contacto h3 {
+    margin-top: 10%;
+  }
+
+  .form-wrapper {
+    align-items: flex-end;
   }
 }
