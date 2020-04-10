@@ -23,7 +23,7 @@ html {
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.25) 0 2px 4px 0;
   transition: 0.3s;
-
+  z-index: 2;
   padding: 0;
 }
 .fig-header {
@@ -34,7 +34,8 @@ html {
 .flex-header {
   display: flex;
   justify-content: space-between;
-  padding-left: 70px;
+  align-items: center;
+  padding-left: 40px;
   padding-right: 40px;
 }
 
@@ -48,7 +49,9 @@ ul {
 ul li {
   width: fit-content;
   list-style: none;
-  height: 90px;
+  height: 100%;
+  display: inherit;
+  align-items: center;
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -58,23 +61,37 @@ ul li {
 }
 ul li a {
   text-decoration: none;
-  height: 90px;
+  height: fit-content;
   display: inline-block;
-  line-height: 3.5;
-  font-size: 25px;
+  font-weight: bolder;
+
+  font-size: 1.3em;
   color: black;
   padding: 0 3px;
 }
 
-ul li a:hover {
+.flex-header ul li:hover {
   background-color: gainsboro;
   color: black;
 }
 
 .fa-home {
   font-size: 60px;
-  margin-top: 15px;
   cursor: pointer;
+}
+
+.fa-home:hover {
+  color: #2b2a28;
+}
+
+.brandHome {
+  display: flex;
+  align-items: flex-start;
+}
+.brandHome h5 {
+  position: relative;
+  top: 15px;
+  font-size: 1.8em;
 }
 
 .home-icon-link {
@@ -88,6 +105,7 @@ ul li a:hover {
   margin-top: 15px;
   color: white;
   cursor: pointer;
+  z-index: 2;
 }
 
 .fa-paw {
@@ -100,6 +118,19 @@ ul li a:hover {
   background-color: black;
 }
 
+/* >>>>>>>>>>>>> MODAL <<<<<<<<<<< */
+
+.modal {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: black;
+  opacity: 0.3;
+}
+
 /* >>>>>>>>>>>HERO <<<<<<<<<<<<<<<<<< */
 
 .hero {
@@ -107,13 +138,14 @@ ul li a:hover {
   width: 100%;
   display: flex;
   align-items: center;
+  justify-content: center;
   padding-left: 2%;
   background: linear-gradient(
       307deg,
       rgba(22, 21, 27, 0.006039915966386533) 15%,
       rgba(11, 10, 14, 0.44021358543417366) 54%
     ),
-    url("images/friends.jpg") no-repeat;
+    url("images/pets.jpg") no-repeat;
   background-position: center;
   background-size: cover;
 
@@ -136,77 +168,32 @@ p {
   font-size: 8vh;
   width: fit-content;
   display: inline-block;
-  opacity: 0;
   line-height: 2;
+  z-index: 0;
   color: white;
-  text-shadow: -10px 0px 6px rgba(66, 28, 18, 0.86);
-  animation: titleAnimation 0.5s 1 0.35s linear;
-  animation-fill-mode: forwards;
+  text-shadow: 0px 6px rgba(40, 28, 24, 0.86);
 }
 
-@keyframes titleAnimation {
+.fa-arrow-down {
+  position: relative;
+  top: 185px;
+  animation: arrow 0.2s 4 0s ease;
+  animation-delay: 2s;
+}
+
+.fa-arrow-down:hover {
+  animation: arrow 0.2s 4 0s ease;
+}
+
+@keyframes arrow {
   0% {
-    opacity: 0;
-    transform: translate(-300px);
+    transform: skewX(10deg);
   }
-  100% {
-    opacity: 1;
+  50% {
+    transform: skewX(-10deg);
   }
 }
 
-/* >>>>>>>>>>>>>>>>> AREA DE FORM <<<<<<<<<<<<< */
-
-.form-wrapper {
-  background-color: #f1f1f1;
-}
-
-.form-cont {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-}
-
-.formulario {
-  height: 30%;
-}
-
-.form-cont p {
-  font-weight: 500;
-  font-size: 28px;
-  margin: 0;
-  margin-bottom: 20px;
-  padding: 0;
-  font-family: "Barlow", sans-serif;
-}
-
-.answer {
-  position: relative;
-  top: 35px;
-}
-
-.form-cont input {
-  width: 700px;
-  height: 30px;
-  border-radius: 5px;
-  border: 2px groove #030202;
-}
-
-.form-cont button {
-  width: 180px;
-  height: 35px;
-  margin-left: 10px;
-  font-style: oblique;
-  border-radius: 5px;
-  font-weight: 500;
-  background-color: #030202;
-  color: white;
-}
-
-/* .cat {
-  position: relative;
-  top: 20%;
-} */
 /* >>>>>>>>>>>>>>>>>> WHY ADOPT A PET <<<<<<<<<<<<<<<< */
 
 h3 {
@@ -228,8 +215,7 @@ h3 {
 }
 
 .friends-box {
-  border: 1px solid black;
-  /* padding: 1px; */
+  box-shadow: -1px 0px 10px 0px rgba(0, 0, 0, 0.75);
   display: flex;
   align-items: center;
   width: 60%;
@@ -259,7 +245,7 @@ h3 {
       rgba(22, 21, 27, 0.006039915966386533) 15%,
       rgba(11, 10, 14, 0.44021358543417366) 54%
     ),
-    url("images/pets.jpg") no-repeat center;
+    url("images/friends.jpg") no-repeat center;
   background-size: cover;
   height: 100vh;
   width: 100%;
@@ -271,6 +257,7 @@ h3 {
 .invitation-cont {
   color: white;
   font-size: 2.2vh;
+  text-shadow: -3px -3px 4px #23181c;
 }
 
 .find-friend {
@@ -304,6 +291,7 @@ h3 {
 /* <<<<<<<<<PETS /  MASCOTAS <<<<<<<<<<< */
 .adopt-section-title {
   font-size: 3vh;
+  margin-top: 2%;
 }
 
 .adopt-little-description {
@@ -328,17 +316,9 @@ h3 {
   grid-template: repeat(3, 180px) / repeat(auto-fill, minmax(210px, 270px));
   grid-gap: 1.5em;
   height: auto;
-  /* max-width: 845px; */
   max-width: 1040px;
 }
 
-/* .pets-grid-container-cat{
-  display: grid;
-  grid-template: repeat(3, 180px) /repeat(3,minmax(210px, 270px));
-  grid-gap: 1em;
-  height: auto;
-  width: 70%;
-} */
 .item {
   overflow: hidden;
   border-radius: 2%;
@@ -499,6 +479,7 @@ h3 {
   border: none;
   border-bottom: 1px solid gray;
   width: 80%;
+  color: white;
 }
 
 .contact-inputs input:focus {
@@ -527,10 +508,6 @@ h3 {
   }
 
   @media screen and (max-width: 1300px) {
-    .form-cont input {
-      width: 500px;
-      margin-top: 10px;
-    }
     .friends-box {
       width: 80%;
       padding: 0;
@@ -569,21 +546,24 @@ h3 {
     }
   }
 
-  @media screen and (max-width: 768px) {
-    .flex-header {
-      padding-left: 10px;
-    }
-    nav {
-      width: 100%;
+  @media screen and (max-width: 860px) {
+    ul li a {
+      font-size: 1.2em;
     }
 
-    ul li {
-      height: fit-content;
+    .flex-header {
+      padding: 0;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    nav {
+      width: 70%;
     }
 
     ul li a {
-      line-height: initial;
       height: fit-content;
+      line-height: normal;
     }
 
     ul li a:hover {
@@ -604,47 +584,9 @@ h3 {
       min-height: 1400px;
     }
 
-    .form-wrapper {
-      height: 100vh;
-      display: flex;
-      align-items: center;
-    }
-
     .hero {
       padding-left: 20px;
       justify-content: center;
-    }
-
-    .form-cont {
-      display: flex;
-      justify-content: center;
-      position: relative;
-      margin-bottom: 10px;
-      max-height: 754px;
-    }
-
-    .form-cont input {
-      max-width: 400px;
-    }
-
-    .form-cont p {
-      font-weight: 500;
-      font-size: 1.6em;
-      margin: 0;
-      margin-bottom: 15px;
-      padding: 0;
-      font-family: "Barlow", sans-serif;
-    }
-
-    .form-cont button {
-      top: 20px;
-      position: relative;
-      width: 400px;
-      margin: 0;
-    }
-
-    .respuesta {
-      font-size: 10px;
     }
 
     .aboutDescription {
@@ -667,39 +609,19 @@ h3 {
     .formulario-contacto {
       width: 80%;
     }
-
-    .form-wrapper {
-      height: 100vh;
-      align-items: flex-end;
-    }
-    .formulario {
-      position: initial;
-      text-align: center;
-    }
-
-    .formulario p {
-      display: inline-block;
-      margin: 5px 0;
-    }
-
-    .cat {
-      position: relative;
-      top: 25px;
-    }
-
-    .form-cont {
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-evenly;
-    }
   }
 
-  @media screen and (max-width: 680px) {
+  @media screen and (max-width: 765px) {
     .aboutContainer {
-      height: 75vh;
+      height: 80%;
     }
   }
+
   @media screen and (max-width: 680px) {
+    header {
+      height: 0px;
+    }
+    /*  */
     ul li a {
       font-size: 20px;
     }
@@ -716,25 +638,41 @@ h3 {
       justify-content: space-evenly;
       flex-direction: column;
     }
-
-    ul li a {
-      font-size: 1.8em;
+    .flex-header ul li a {
+      font-size: 1.5em;
     }
 
-    ul li a:hover {
+    .flex-header ul li:hover {
       text-decoration: underline;
+      background-color: white;
     }
 
     .home-li {
       display: inline-block;
     }
 
-    .fa-home {
+    .home-li a:hover {
+      text-decoration: underline;
+    }
+
+    .fa-home,
+    .brandHome h5 {
       display: none;
     }
 
+    nav {
+      width: 100%;
+      height: 80%;
+    }
+    nav ul {
+      padding: 0px;
+    }
+
+    ul li {
+      height: fit-content;
+    }
+
     .visibility {
-      /* visibility: hidden; */
       transform: translate(-100%);
     }
 
@@ -742,7 +680,7 @@ h3 {
       visibility: visible;
       background-color: black;
       position: fixed;
-      z-index: 2;
+      z-index: 3;
       left: 0;
       top: 0;
       margin: 0;
@@ -764,39 +702,35 @@ h3 {
       padding: 0;
       margin-bottom: 2%;
     }
+
+    .aboutTitle {
+      display: flex;
+      align-items: center;
+      height: 15vh;
+      margin: 0px;
+    }
+
+    .aboutContainer {
+      height: 80%;
+    }
+
+    .aboutDescription {
+      height: auto;
+    }
   }
 
   @media screen and (max-width: 425px) {
-    header {
-      height: 0px;
-    }
-    .form-wrapper {
-      justify-content: center;
-      height: 110vh;
-    }
-
     .flex-header {
       padding: 0;
-    }
-
-    .formulario p {
-      font-size: 3vh;
-    }
-
-    .formulario input,
-    button {
-      max-width: 300px;
-    }
-
-    .answer {
-      font-size: 3vh;
     }
 
     .hero {
       height: 100vh;
     }
     .title {
-      font-size: 4;
+      position: relative;
+      top: -35px;
+      font-size: 7vh;
     }
 
     h3 {
@@ -824,50 +758,20 @@ h3 {
       max-height: 400px;
     }
 
-    nav ul {
-      padding: 0px;
-    }
-
     .imgAbout {
       background-position: center;
 
-      height: 30vh;
+      height: 20vh;
     }
 
     .adopt-section {
       margin-top: 15%;
     }
 
-    .aboutTitle {
-      display: flex;
-      align-items: center;
-      height: 15vh;
-      margin: 0px;
-    }
-
-    .aboutContainer {
-      height: 80%;
-    }
-
-    .aboutDescription {
-      height: 70%;
-    }
-
-    .aboutTextContainer {
-      background-color: white;
-      /* height: 50vh; */
-    }
-
     .contact-section {
       height: 88vh;
     }
   }
-}
-@media screen and (max-width: 375px) {
-  .friends-box:nth-child(2) p {
-    padding: 8px;
-  }
-
   .formulario-contacto {
     width: 100%;
   }
@@ -875,8 +779,9 @@ h3 {
   .formulario-contacto h3 {
     margin-top: 10%;
   }
-
-  .form-wrapper {
-    align-items: flex-end;
+}
+@media screen and (max-width: 375px) {
+  .friends-box:nth-child(2) p {
+    padding: 8px;
   }
 }

@@ -24,13 +24,17 @@
       <!---------------  HEADER -------------->
       <header>
         <figure class="fig-header">
-          <i onclick="burger()" id="paw" class="fas fa-paw"></i>
+          <!-- onclick="burger()"  -->
+          <i class="fas fa-paw" id="pawId"></i>
         </figure>
         <div class="container header-div visibility" id="menu-header">
           <div class="flex-header">
-            <a class="home-icon-link" href="index.html"
-              ><i class="fas fa-home"></i
-            ></a>
+            <div class="brandHome">
+              <a class="home-icon-link" href="index.html"
+                ><i class="fas fa-home"></i
+              ></a>
+              <h5>+Mascotas</h5>
+            </div>
             <nav>
               <ul>
                 <li class="home-li"><a href="index.html">Home</a></li>
@@ -42,6 +46,9 @@
           </div>
         </div>
       </header>
+      <!------ MODAL ------>
+
+      <div id="myModal"></div>
 
       <!-- ABOUT US  -->
 
@@ -100,6 +107,6 @@
     <script>
       AOS.init();
     </script>
-    <script src="app2.js"></script>
+    <script src="app.js"></script>
   </body>
 </html>

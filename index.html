@@ -24,13 +24,16 @@
       <!---------------  HEADER -------------->
       <header>
         <figure class="fig-header">
-          <i onclick="burger()" id="paw" class="fas fa-paw"></i>
+          <i class="fas fa-paw" id="pawId"></i>
         </figure>
         <div class="container header-div visibility" id="menu-header">
           <div class="flex-header">
-            <a class="home-icon-link" href="index.html"
-              ><i class="fas fa-home"></i
-            ></a>
+            <div class="brandHome">
+              <a class="home-icon-link" href="index.html"
+                ><i class="fas fa-home"></i
+              ></a>
+              <h5>+Mascotas</h5>
+            </div>
             <nav>
               <ul>
                 <li class="home-li"><a href="index.html">Home</a></li>
@@ -42,47 +45,23 @@
           </div>
         </div>
       </header>
+      <!------ MODAL ------>
+
+      <div id="myModal"></div>
 
       <!------------- HERO  --------------->
-      <div class="container hero">
+      <div class="container hero" data-aos="fade" data-aos-duration="2000">
         <h1 class="title">
           Refugio de animales <br />
           +Mascotas
+          <br />
+          <i class="fas fa-arrow-down"></i>
         </h1>
-      </div>
-
-      <!------------- FORM  --------------->
-      <div class="form-wrapper">
-        <div class="form-cont" data-aos="fade" data-aos-duration="2000">
-          <div class="formulario">
-            <p>
-              Para comenzar dinos tu nombre, por favor
-            </p>
-
-            <input
-              type="text"
-              id="user-name"
-              placeholder="Introduce tu nombre..."
-              required
-            />
-
-            <button id="button">Enviar</button>
-
-            <p id="print-nombre" class="answer"></p>
-          </div>
-          <img
-            src="images/cat-ConvertImage.png"
-            width="150"
-            height="150"
-            class="cat"
-            alt=""
-          />
-        </div>
       </div>
 
       <!--WHY ADOPT A PET -->
       <div class="container">
-        <h3>¿Por qué adoptar una mascota?</h3>
+        <h3>¿Por qué adoptar?</h3>
         <div class="friends-cont">
           <div class="friends-box">
             <p>

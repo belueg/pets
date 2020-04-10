@@ -1,39 +1,22 @@
-var n = document.getElementById("user-name");
-var menu = document.getElementById("menu-header");
-var b = document.getElementById("button");
-var print = document.getElementById("print-nombre");
+const menu = document.getElementById("menu-header");
+const paw_Button = document.getElementById("pawId");
+const my_Modal = document.getElementById("myModal");
+const li_cat = document.getElementById("cats-btn");
+const li_dog = document.getElementById("dogs-btn");
+const dog_cont = document.getElementById("dogs-cont");
+const cat_cont = document.getElementById("cats-cont");
 
-
-
-var name;
-var notVisible = true;
-
-b.addEventListener("click", saludar);
-
-
-// Form gretting
-
-function saludar() {
-  name = n.value;
-  if (name) {
-    print.innerHTML = `Hola! ${name}, te damos la bienvenida a +mascotas.<br> Esperamos que encuentres tu compañero perfecto`;
-    n.value = null;
-  } else {
-    print.innerHTML = " ";
-  }
-}
+paw_Button.addEventListener("click", responsiveMenu);
+my_Modal.addEventListener("click", removeBurgerMenu);
 
 // Responsive menu
 
-function burger() {
-  if (notVisible) {
-    menu.classList.remove("visibility");
-    notVisible = false;
-  } else {
-    menu.classList.add("visibility");
-    notVisible = true;
-  }
+function responsiveMenu(ev) {
+  menu.classList.toggle("visibility");
+  my_Modal.classList.toggle("modal");
 }
-
-
-
+//Remove responsive menu modal
+function removeBurgerMenu(ev) {
+  menu.classList.add("visibility");
+  my_Modal.classList.remove("modal");
+}
