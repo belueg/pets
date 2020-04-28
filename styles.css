@@ -176,7 +176,7 @@ p {
 
 .fa-arrow-down {
   position: relative;
-  top: 185px;
+  top: 100px;
   animation: arrow 0.2s 4 0s ease;
   animation-delay: 2s;
 }
@@ -771,14 +771,19 @@ h3 {
     .contact-section {
       height: 88vh;
     }
-  }
-  .formulario-contacto {
-    width: 100%;
-  }
 
-  .formulario-contacto h3 {
-    margin-top: 10%;
+
+    .formulario-contacto {
+      width: 100%;
+    }
+
+    .formulario-contacto h3 {
+      margin-top: 10%;
+    }
   }
+  
+
+ 
 }
 @media screen and (max-width: 375px) {
   .friends-box:nth-child(2) p {
